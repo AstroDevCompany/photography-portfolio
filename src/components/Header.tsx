@@ -87,7 +87,7 @@ export function NavigationMenuDemo() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/about">About me</Link>
+            <Link href="/workinprogress">About me</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button"
-import { Instagram, Mail, Send, MapPin } from "lucide-react"
+import { Instagram, Mail, Send, MapPin, Car, House, Mountain, Trees } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import Link from "next/link";
 import Image from "next/image";
@@ -103,26 +103,38 @@ export default function Home() {
               <div className="md:col-span-2">
                 <div className="grid md:grid-cols-2 gap-8">
                   <Card className="p-6 bg-card border-border">
-                    <h3 className="text-xl font-medium mb-3">Street Photography</h3>
+                    <div className="flex gap-3">
+                      <House />
+                      <h3 className="text-xl font-medium">Street Photography</h3>
+                    </div>
                     <p className="text-muted-foreground leading-relaxed">
                       Documenting life as it happens on the streets. Urban architecture,
                       and the rhythm of city life.
                     </p>
                   </Card>
                   <Card className="p-6 bg-card border-border">
-                    <h3 className="text-xl font-medium mb-3">Wildlife & Nature</h3>
+                    <div className="flex gap-3">
+                      <Trees />
+                      <h3 className="text-xl font-medium">Wildlife & Nature</h3>
+                    </div>
                     <p className="text-muted-foreground leading-relaxed">
                       Sunsets, forests, and the intricate details of flora and fauna.
                     </p>
                   </Card>
                   <Card className="p-6 bg-card border-border">
-                    <h3 className="text-xl font-medium mb-3">Vehicles</h3>
+                    <div className="flex gap-3">
+                      <Car />
+                      <h3 className="text-xl font-medium">Vehicles</h3>
+                    </div>
                     <p className="text-muted-foreground leading-relaxed">
                       Strictly non-electric vehicles. Sport cars & motorcycles with powerful combustion engines. Some planes too.
                     </p>
                   </Card>
                   <Card className="p-6 bg-card border-border">
-                    <h3 className="text-xl font-medium mb-3">Landscapes</h3>
+                    <div className="flex gap-3">
+                      <Mountain />
+                      <h3 className="text-xl font-medium">Landscapes</h3>
+                    </div>
                     <p className="text-muted-foreground leading-relaxed">
                       Mountains, hills, coastlines and cityscapes. Capturing the beauty of our world.
                     </p>
@@ -159,7 +171,6 @@ export default function Home() {
               className="w-full h-full object-cover border-4 border-gray-800 dark:border-gray-500 rounded-2xl overflow-hidden"
             />
             </a>
-            <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()} /> {/* Prevent right-click on image */}
           </div>
         </section>
 
