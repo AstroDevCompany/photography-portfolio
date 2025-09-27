@@ -69,24 +69,24 @@ export default function Home() {
 
         {/* About Section */}
         <section id="about" className="py-16 px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-[70vw] mx-auto">
             <div className="grid md:grid-cols-3 gap-12">
               <div className="md:col-span-1">
-                <h2 className="text-2xl font-light mb-6">About</h2>
+                <h2 className="text-[3vw] font-light mb-6">About</h2>
               </div>
               <div className="md:col-span-2 space-y-6">
                 <p className="text-lg leading-relaxed text-muted-foreground">
                   I'm an amateur photographer passionate about capturing the world around me. What started as a hobby has
-                  evolved into a deep appreciation for visual storytelling and the art of freezing moments in time.
+                  evolved into a deep appreciation in the art of freezing moments in time.
                 </p>
                 <p className="text-lg leading-relaxed text-muted-foreground">
                   My work focuses on authentic human connections, urban landscapes, and the beauty found in everyday life.
-                  I believe that photography is about more than just technical skill—it's about seeing the extraordinary
+                  I believe that photography is about more than just technical skill; It's about seeing the extraordinary
                   in the ordinary and sharing that vision with others.
                 </p>
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  When I'm not behind the camera, you can find me exploring new neighborhoods, reading about photography
-                  techniques, or planning my next photo walk through the city.
+                  I also have many other hobbies: hiking, riding (motorcycles), driving, programming, gaming, and more.
+                  I'm currently studying Computer Science and Engineering at university.
                 </p>
               </div>
             </div>
@@ -95,39 +95,36 @@ export default function Home() {
 
         {/* Photography Focus Areas */}
         <section id="wic" className="py-16 px-6">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-[70vw] mx-auto">
             <div className="grid md:grid-cols-3 gap-12">
               <div className="md:col-span-1">
-                <h2 className="text-2xl font-light mb-6">What I Capture</h2>
+                <h2 className="text-[3vw] font-light mb-6">What I capture</h2>
               </div>
               <div className="md:col-span-2">
                 <div className="grid md:grid-cols-2 gap-8">
                   <Card className="p-6 bg-card border-border">
                     <h3 className="text-xl font-medium mb-3">Street Photography</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Documenting life as it happens on the streets of San Francisco. Candid moments, urban architecture,
+                      Documenting life as it happens on the streets. Urban architecture,
                       and the rhythm of city life.
                     </p>
                   </Card>
                   <Card className="p-6 bg-card border-border">
-                    <h3 className="text-xl font-medium mb-3">Portraits</h3>
+                    <h3 className="text-xl font-medium mb-3">Wildlife & Nature</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Natural, authentic portraits that capture personality and emotion. Working with available light to
-                      create intimate, genuine images.
+                      Sunsets, forests, and the intricate details of flora and fauna.
+                    </p>
+                  </Card>
+                  <Card className="p-6 bg-card border-border">
+                    <h3 className="text-xl font-medium mb-3">Vehicles</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Strictly non-electric vehicles. Sport cars & motorcycles with powerful combustion engines. Some planes too.
                     </p>
                   </Card>
                   <Card className="p-6 bg-card border-border">
                     <h3 className="text-xl font-medium mb-3">Landscapes</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Exploring the natural beauty of Northern California. From coastal scenes to mountain vistas,
-                      capturing the changing light and seasons.
-                    </p>
-                  </Card>
-                  <Card className="p-6 bg-card border-border">
-                    <h3 className="text-xl font-medium mb-3">Documentary</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Telling stories through images. Local events, community gatherings, and the small moments that make
-                      up our shared human experience.
+                      Mountains, hills, coastlines and cityscapes. Capturing the beauty of our world.
                     </p>
                   </Card>
                 </div>
@@ -137,78 +134,46 @@ export default function Home() {
         </section>
 
         {/* Featured Work Preview */}
-        <section id="work" className="py-16 px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <section id="work" className="py-16 px-6 w-full items-center justify-center flex flex-col gap-12">
+          <div className="max-w-[70vw] mx-auto">
+            <div className="grid md:grid-cols-3 gap-12">
               <div className="md:col-span-1">
-                <h2 className="text-2xl font-light mb-6">Recent Work</h2>
+                <h2 className="text-[3vw] font-light mb-6">Recent Work</h2>
               </div>
               <div className="md:col-span-2">
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   A selection of recent photographs showcasing different styles and subjects. Each image represents a
-                  moment, a story, or an emotion captured through my lens.
+                  moment, a story, or an emotion captured through my lens. Updated "weekly", schedule isn't consistent.
                 </p>
               </div>
             </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="aspect-square bg-muted rounded-lg overflow-hidden">
-                <img
-                  src="/urban-street-bw.png"
-                  alt="Street photography sample"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="aspect-square bg-muted rounded-lg overflow-hidden">
-                <img
-                  src="/natural-portrait-photography-golden-hour.jpg"
-                  alt="Portrait photography sample"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="aspect-square bg-muted rounded-lg overflow-hidden">
-                <img
-                  src="/landscape-photography-california-coast-sunset.jpg"
-                  alt="Landscape photography sample"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="aspect-square bg-muted rounded-lg overflow-hidden">
-                <img
-                  src="/documentary-photography-community-event.jpg"
-                  alt="Documentary photography sample"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="aspect-square bg-muted rounded-lg overflow-hidden">
-                <img
-                  src="/architectural-photography-san-francisco-buildings.jpg"
-                  alt="Architecture photography sample"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="aspect-square bg-muted rounded-lg overflow-hidden">
-                <img
-                  src="/nature-photography-macro-close-up-details.jpg"
-                  alt="Nature photography sample"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            </div>
+          </div>
+          <div className="w-[40vw] min-w-[400px] h-auto">
+            <a href="https://instagram.com/lucashotedits" target="_blank" rel="noopener noreferrer"><Image
+              src="/feed.png"
+              width={1080}
+              height={700}
+              sizes="50vw" //Render resolution = 1/3 of screen
+              draggable={false}
+              alt="lucashotedits - Photographer"
+              className="w-full h-full object-cover border-4 border-gray-800 dark:border-gray-500 rounded-2xl overflow-hidden"
+            />
+            </a>
+            <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()} /> {/* Prevent right-click on image */}
           </div>
         </section>
 
         {/* Contact Section */}
         <section id="contact" className="py-16 px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-[70vw] mx-auto">
             <div className="grid md:grid-cols-3 gap-12">
               <div className="md:col-span-1">
-                <h2 className="text-2xl font-light mb-6">Get in Touch</h2>
+                <h2 className="text-[3vw] font-light mb-6">Get in Touch</h2>
               </div>
               <div className="md:col-span-2 space-y-6">
                 <p className="text-lg leading-relaxed text-muted-foreground">
                   Interested in collaborating or have questions about my work? I'd love to hear from you. Whether it's for
-                  a portrait session, event documentation, or just to chat about photography.
+                  a portrait session, event documentation, or just to chat about photography. I usually reply within a couple of days.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild variant="outline" className="gap-2">
