@@ -1,0 +1,19 @@
+#responsive-heading {
+  display: none;
+}
+
+#responsive-small {
+  display: none;
+}
+
+@media (min-width: 780px) {
+  #responsive-heading {
+    display: block;
+  }
+}
+
+@media (min-width: 600px) {
+  #responsive-small {
+    display: block;
+  }
+}

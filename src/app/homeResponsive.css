@@ -1,0 +1,22 @@
+/* Mobile-first responsive styles */
+@media (max-width: 640px) {
+  #responsiveVertical {
+    text-align: center;
+  }
+
+  .grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .max-w-6xl {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

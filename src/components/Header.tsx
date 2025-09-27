@@ -1,4 +1,5 @@
 "use client";
+import "../app/headerResponsive.css"
 import img_logo from "../../public/logo.jpg";
 import ThemeToggle from "./ThemeToggle";
 import * as React from "react"
@@ -147,9 +148,9 @@ export default function Header() {
         <div className="flex items-center">
           <a href="https://instagram.com/lucashotedits" target="_blank" rel="noopener noreferrer" className="relative">
             <div className="flex items-center space-x-3">
-              <img src={img_logo.src} draggable={false} alt="Logo" className="h-10 w-10 object-contain rounded-3xl" />
+              <img id="responsive-small" src={img_logo.src} draggable={false} alt="Logo" className="h-10 w-10 object-contain rounded-3xl" />
               <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()} />
-              <p className="text-xl font-bold text-gray-800 dark:text-white transition-all">@lucashotedits</p>
+              <p id="responsive-heading" className="text-xl font-bold text-gray-800 dark:text-white transition-all">@lucashotedits</p>
             </div>
           </a>
         </div>
@@ -159,11 +160,11 @@ export default function Header() {
         <div className="flex items-center space-x-3">
           <NavigationMenuDemo />
 
-          <div className="px-2 text-gray-800 dark:text-white text-lg">
+          <div id="responsive-small" className="px-2 text-gray-800 dark:text-white text-lg">
             |
           </div>
 
-          <ThemeToggle /></div>
+          <div id="responsive-small"><ThemeToggle /></div></div>
       </div>
     </header>
   );
