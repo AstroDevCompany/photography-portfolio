@@ -30,9 +30,9 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="px-3 py-2 rounded bg-gray-200 dark:bg-gray-800 transition"
+      className="px-3 py-2 rounded border-2 border-gray-400 dark:border-gray-600"
     >
-      {isDark ? <img src={img_sun.src} className="w-5 h-5"></img> : <img src={img_moon.src} className="w-5 h-5"></img>}
+      {isDark ? <img src={img_sun.src} className="w-4 h-4"></img> : <img src={img_moon.src} className="w-4 h-4"></img>}
     </button>
   );
 }
