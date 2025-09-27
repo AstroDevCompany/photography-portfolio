@@ -1,4 +1,8 @@
 /* Mobile-first responsive styles */
+#responsive-hide {
+  display: none;
+}
+
 @media (max-width: 640px) {
   #responsiveVertical {
     text-align: center;
@@ -6,6 +10,10 @@
 
   .grid {
     gap: 1.5rem;
+  }
+
+  #responsive-hide {
+    display: block;
   }
 }
 

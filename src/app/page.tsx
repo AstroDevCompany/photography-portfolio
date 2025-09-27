@@ -9,6 +9,7 @@ import Image from "next/image"
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-start min-h-screen pt-20 dark:bg-black bg-white">
+      <div id="responsive-hide" className="text-yellow-500 dark:text-yellow-300" >! Visit this website from a landscape device and enjoy a way more immersive and enjoyable experience !</div>
       <div id="topSection" className="w-full h-full flex flex-col justify-start items-center">
         {/* Hero Section */}
         <section id="hero" className="pt-24 pb-16 px-6">
