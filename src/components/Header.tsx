@@ -66,7 +66,7 @@ export function NavigationMenuDemo() {
                   </Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
-                  <Link href="#">
+                  <Link href="/workinprogress">
                     <div className="font-medium">Best of - Showcase</div>
                     <div className="text-muted-foreground">
                       View some of my best shots.
@@ -87,7 +87,7 @@ export function NavigationMenuDemo() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/docs">About me</Link>
+            <Link href="/about">About me</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
@@ -144,13 +144,15 @@ export default function Header() {
           px-6 py-4
           flex items-center justify-between">
 
-        <a href="https://instagram.com/lucashotedits" target="_blank" rel="noopener noreferrer">
-          <div className="flex items-center space-x-3">
-            <img src={img_logo.src} draggable={false} alt="Logo" className="h-10 w-10 object-contain rounded-3xl" />
-            <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()} />
-            <p className="text-xl font-bold text-gray-800 dark:text-white hover:underline transition-all">@lucashotedits</p>
-          </div>
-        </a>
+        <div className="flex items-center">
+          <a href="https://instagram.com/lucashotedits" target="_blank" rel="noopener noreferrer" className="relative">
+            <div className="flex items-center space-x-3">
+              <img src={img_logo.src} draggable={false} alt="Logo" className="h-10 w-10 object-contain rounded-3xl" />
+              <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()} />
+              <p className="text-xl font-bold text-gray-800 dark:text-white transition-all">@lucashotedits</p>
+            </div>
+          </a>
+        </div>
 
         {/* Navigation */}
 
