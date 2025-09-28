@@ -7,6 +7,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { useEffect, useState } from "react"
 
+
 export default function Home() {
   const [secondsLeft, setSecondsLeft] = useState(5);
   const [visible, setVisible] = useState(true);

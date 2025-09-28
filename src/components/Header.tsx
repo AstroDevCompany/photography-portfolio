@@ -68,9 +68,17 @@ export function NavigationMenuDemo() {
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
                   <Link href="/workinprogress">
-                    <div className="font-medium">Best of - Showcase</div>
+                    <div className="font-medium">Editor's Choice</div>
                     <div className="text-muted-foreground">
-                      View some of my best shots.
+                      View some of my best shots ever.
+                    </div>
+                  </Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+                  <Link href="/bestofmonth">
+                    <div className="font-medium">Best of the Month</div>
+                    <div className="text-muted-foreground">
+                      View my best releases of september.
                     </div>
                   </Link>
                 </NavigationMenuLink>
