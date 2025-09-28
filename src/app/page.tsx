@@ -1,7 +1,7 @@
 "use client"
 import "./homeResponsive.css"
 import { Button } from "@/components/ui/button"
-import { Instagram, Mail, Send, MapPin, Car, Mouse as House, Mountain, Trees } from "lucide-react"
+import { Instagram, Mail, Send, MapPin, Car, House, Mountain, Trees } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import Link from "next/link"
 import Image from "next/image"
@@ -138,7 +138,7 @@ export default function Home() {
               <div className="md:col-span-2">
                 <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
                   <Card className="p-6 bg-card border-border">
-                    <div className="flex gap-3 mb-3">
+                    <div className="flex gap-3">
                       <House />
                       <h3 className="text-lg sm:text-xl font-medium">Street Photography</h3>
                     </div>
@@ -147,7 +147,7 @@ export default function Home() {
                     </p>
                   </Card>
                   <Card className="p-6 bg-card border-border">
-                    <div className="flex gap-3 mb-3">
+                    <div className="flex gap-3">
                       <Trees />
                       <h3 className="text-lg sm:text-xl font-medium">Wildlife & Nature</h3>
                     </div>
@@ -156,7 +156,7 @@ export default function Home() {
                     </p>
                   </Card>
                   <Card className="p-6 bg-card border-border">
-                    <div className="flex gap-3 mb-3">
+                    <div className="flex gap-3">
                       <Car />
                       <h3 className="text-lg sm:text-xl font-medium">Vehicles</h3>
                     </div>
@@ -166,7 +166,7 @@ export default function Home() {
                     </p>
                   </Card>
                   <Card className="p-6 bg-card border-border">
-                    <div className="flex gap-3 mb-3">
+                    <div className="flex gap-3">
                       <Mountain />
                       <h3 className="text-lg sm:text-xl font-medium">Landscapes</h3>
                     </div>
