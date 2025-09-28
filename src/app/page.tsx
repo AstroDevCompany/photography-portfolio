@@ -5,11 +5,32 @@ import { Instagram, Mail, Send, MapPin, Car, Mouse as House, Mountain, Trees } f
 import { Card } from "@/components/ui/card"
 import Link from "next/link"
 import Image from "next/image"
+import { useEffect, useState } from "react"
 
 export default function Home() {
+  const [secondsLeft, setSecondsLeft] = useState(5);
+  const [visible, setVisible] = useState(true);
+  useEffect(() => {
+    if (!visible) return;
+
+    const interval = setInterval(() => {
+      setSecondsLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(interval);
+          setVisible(false);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [visible]);
   return (
     <div className="flex flex-col items-center justify-start min-h-screen pt-20 dark:bg-black bg-white">
-      <div id="responsive-hide" className="text-yellow-500 dark:text-yellow-300" >! Visit this website from a landscape device and enjoy a way more immersive and enjoyable experience !</div>
+      {visible && (<div id="responsive-hide" className="text-center text-yellow-500 dark:text-yellow-300 max-w-[70vw]" >! Visit this website from a landscape device and enjoy a way more immersive and enjoyable experience !</div>)}
+      {visible && (<div id="responsive-hide" className="text-center text-yellow-500 dark:text-yellow-300 max-w-[70vw]" >Hiding in {secondsLeft} second{secondsLeft !== 1 && "s"}...</div>)}
+
       <div id="topSection" className="w-full h-full flex flex-col justify-start items-center">
         {/* Hero Section */}
         <section id="hero" className="pt-24 pb-16 px-6">
@@ -175,17 +196,15 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full max-w-md sm:max-w-lg lg:w-[40vw] lg:max-w-none h-auto px-4 sm:px-0">
-            <a href="https://instagram.com/lucashotedits" target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/feed.png"
-                width={1080}
-                height={700}
-                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 50vw"
-                draggable={false}
-                alt="lucashotedits - Photographer"
-                className="w-full h-full object-cover border-4 border-gray-800 dark:border-gray-500 rounded-2xl overflow-hidden"
-              />
-            </a>
+            <Image
+              src="/feed.png"
+              width={1080}
+              height={700}
+              sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 50vw"
+              draggable={false}
+              alt="lucashotedits - Photographer"
+              className="w-full h-full object-cover border-4 border-gray-800 dark:border-gray-500 rounded-2xl overflow-hidden"
+            />
           </div>
         </section>
 
