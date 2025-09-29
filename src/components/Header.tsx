@@ -67,7 +67,7 @@ export function NavigationMenuDemo() {
                   </Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
-                  <Link href="/workinprogress">
+                  <Link href="/bestever">
                     <div className="font-medium">Editor's Choice</div>
                     <div className="text-muted-foreground">
                       View some of my best shots ever.
