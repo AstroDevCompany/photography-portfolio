@@ -19,29 +19,59 @@ const photos: Photo[] = [
     title: "Gares' Waterfall",
     description: "Captured during the perfect golden hour when the light danced across the still waters.",
     views: 100,
-    src: "/bestofmonth/IMG_1020.png",
+    src: "/bestever/IMG_1020.jpg",
   },
   {
     id: 2,
     title: "Fedaia Lake",
-    description: "The rhythm of city life captured in a single frame during rush hour.",
+    description: "A lake that has plenty of detail to show off.",
     views: 75,
-    src: "/bestofmonth/IMG_0905.png",
+    src: "/bestever/IMG_0905.jpg",
   },
   {
     id: 3,
     title: "Valparola Pass Lake",
-    description: "Morning mist revealing the ancient secrets of the old-growth forest.",
+    description: "A rusty lake that I turned into an insanely clear and reflective surface.",
     views: 100,
-    src: "/bestofmonth/IMG_0907.png",
+    src: "/bestever/IMG_0907.jpg",
   },
   {
     id: 4,
     title: "Giau Pass",
     description: "Modern geometry meets timeless design in this downtown masterpiece.",
     views: 100,
-    src: "/bestofmonth/BS_Mountain.png",
-  },
+    src: "/bestever/BS_Mountain.jpg",
+  }, {
+    id: 5,
+    title: "London Eye",
+    description: "The iconic London Eye, a giant Ferris wheel on the South Bank of the River Thames in London.",
+    views: 1000,
+    src: "/bestever/BS_LondonEye.jpg",
+  }, {
+    id: 6,
+    title: "Bike after exhaust mod",
+    description: "My Kawasaki Z500 after the exhaust mod, looking sleek and aggressive.",
+    views: 500,
+    src: "/bestever/BS_z500.jpg",
+  }, {
+    id: 7,
+    title: "Bike at sunset",
+    description: "My Kawasaki Z500 during a stunning sunset, capturing the essence of freedom and adventure.",
+    views: 500,
+    src: "/bestever/z500 Super-sunset pic.jpg",
+  }, {
+    id: 8,
+    title: "Lake Coldai",
+    description: "This is Lake Coldai, a beautiful alpine lake in the Dolomites, Italy.",
+    views: 50,
+    src: "/bestever/IMG_9404.jpg",
+  }, {
+    id: 9,
+    title: "View from Falier",
+    description: "Beatiful green valley view from Rifugio Falier in the Dolomites, Italy.",
+    views: 100,
+    src: "/bestever/IMG_8707.jpg",
+  }
 ]
 
 export default function BestEverPage() {
@@ -55,15 +85,15 @@ export default function BestEverPage() {
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div className="space-y-2">
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-playfair font-light text-balance">
-                Best Shots of the Month
+                My best shots ever - TOP 10
               </h1>
               <p className="text-muted-foreground text-sm sm:text-base text-pretty">
-                September 2025 • Curated collection of my finest work
+                Only personal shots, not edited shots from someone else.
               </p>
             </div>
             <div className="flex items-center gap-4">
               <Badge variant="secondary" className="text-xs sm:text-sm">
-                <Camera className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />4 Featured
+                <Camera className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />9 Featured
               </Badge>
             </div>
           </div>
