@@ -95,9 +95,53 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/workinprogress">About me</Link>
-          </NavigationMenuLink>
+          <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[300px] gap-4">
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link href="/services">
+                    <div className="font-medium">Overview</div>
+                    <div className="text-muted-foreground">
+                      View all the services I offer more in-depth.
+                    </div>
+                  </Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+                  <Link href="/workinprogress">
+                    <div className="font-medium">Personal RAW Edit</div>
+                    <div className="text-muted-foreground">
+                      Request a custom RAW edit of your photo. It will be yours.
+                    </div>
+                  </Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+                  <Link href="/workinprogress">
+                    <div className="font-medium">Credited RAW Edit</div>
+                    <div className="text-muted-foreground">
+                      Request a custom RAW edit of your photo. It will be published on my IG and you'll be tagged.
+                    </div>
+                  </Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+                  <Link href="/workinprogress">
+                    <div className="font-medium">Presets</div>
+                    <div className="text-muted-foreground">
+                      Buy my custom presets for multiple software.
+                    </div>
+                  </Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+                  <Link href="/workinprogress">
+                    <div className="font-medium">Vehicle Photoshoot</div>
+                    <div className="text-muted-foreground">
+                      Request a photoshoot session for your car/bike. Available for limited locations.
+                    </div>
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Reach out</NavigationMenuTrigger>
