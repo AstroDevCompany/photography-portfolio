@@ -8,14 +8,25 @@ export default function ThemeToggle() {
   const [theme, setTheme] = React.useState<"light" | "dark">("light")
 
   React.useEffect(() => {
-    const isDark = document.documentElement.classList.contains("dark")
-    setTheme(isDark ? "dark" : "light")
+    // Load theme from localStorage if available
+    const storedTheme = localStorage.getItem("theme") as "light" | "dark" | null
+    if (storedTheme) {
+      setTheme(storedTheme)
+      document.documentElement.classList.toggle("dark", storedTheme === "dark")
+    } else {
+      // Fallback: check system preference or default light
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+      const initialTheme = prefersDark ? "dark" : "light"
+      setTheme(initialTheme)
+      document.documentElement.classList.toggle("dark", initialTheme === "dark")
+    }
   }, [])
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light"
     setTheme(newTheme)
-    document.documentElement.classList.toggle("dark")
+    localStorage.setItem("theme", newTheme)
+    document.documentElement.classList.toggle("dark", newTheme === "dark")
   }
 
   return (

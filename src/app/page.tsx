@@ -2,6 +2,8 @@
 import "./homeResponsive.css"
 import { Button } from "@/components/ui/button"
 import { Instagram, Mail, Send, MapPin, Car, House, Mountain, Trees } from "lucide-react"
+import { ServiceCard } from "@/components/service-card"
+import { Camera, Palette, Package } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import Link from "next/link"
 import Image from "next/image"
@@ -209,6 +211,36 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Services overview */}
+        <section id="work" className="py-16 px-6 w-full items-center justify-center flex flex-col gap-12">
+          <div className="max-w-4xl lg:max-w-[70vw] mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+              <div className="md:col-span-1">
+                <h2 className="text-2xl sm:text-3xl lg:text-[3vw] font-light mb-6">Recent Work</h2>
+              </div>
+              <div className="md:col-span-2">
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                  A selection of recent photographs showcasing different styles and subjects. Each image represents a
+                  moment, a story, or an emotion captured through my lens. Updated "weekly", schedule isn't consistent.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="w-full max-w-md sm:max-w-lg lg:w-[40vw] lg:max-w-none h-auto px-4 sm:px-0">
+            <Image
+              src="/feed.png"
+              width={1080}
+              height={700}
+              sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 50vw"
+              draggable={false}
+              alt="lucashotedits - Photographer"
+              className="w-full h-full object-cover border-4 border-gray-800 dark:border-gray-500 rounded-2xl overflow-hidden"
+            />
+          </div>
+        </section>
+
+        <ServicesDisplay />
+
         {/* Contact Section */}
         <section id="contact" className="py-16 px-6">
           <div className="max-w-4xl lg:max-w-[70vw] mx-auto">
@@ -239,6 +271,112 @@ export default function Home() {
           </div>
         </section>
       </div>
+    </div>
+  )
+}
+
+
+function ServicesDisplay() {
+  const services = [
+    {
+      icon: Camera,
+      title: "Personal RAW Edit",
+      description: "Get your photos professionally edited with full ownership rights.",
+      features: [
+        "Picture becomes yours",
+        "Paid option: No credit needed",
+        "Free option: Credit required, simpler edits",
+        "High-quality retouching",
+      ],
+      gradient: "from-blue-500 via-cyan-500 to-teal-500",
+    },
+    {
+      icon: Palette,
+      title: "Credited RAW Edit",
+      description: "Professional editing with social media exposure on my Instagram profile.",
+      features: [
+        "Posted on my Instagram",
+        "You get tagged in the post",
+        "Professional portfolio piece",
+        "Collaborative creative process",
+      ],
+      gradient: "from-purple-500 via-pink-500 to-rose-500",
+    },
+    {
+      icon: Package,
+      title: "Presets",
+      description: "Purchase my signature editing presets for various photo editing software.",
+      features: [
+        "Compatible with multiple software",
+        "Instant download",
+        "Professional color grading",
+        "Easy one-click application",
+      ],
+      gradient: "from-orange-500 via-amber-500 to-yellow-500",
+    },
+    {
+      icon: Car,
+      title: "Vehicle Photoshoot",
+      description: "Professional photoshoot services for your motorcycle or car in select locations.",
+      features: [
+        "Bikes and cars welcome",
+        "Limited selected locations",
+        "Close to professional results",
+        "Editing included",
+      ],
+      gradient: "from-emerald-500 via-green-500 to-lime-500",
+    },
+  ]
+
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden border-b border-border">
+        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="mb-6 text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent dark:from-blue-400 dark:via-purple-400 dark:to-pink-400">
+                Photography Services
+              </span>
+            </h1>
+            <p className="mx-auto max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
+              Professional photo editing and photography services tailored to bring your vision to life. From RAW edits
+              to vehicle photoshoots, I've got you covered.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div className="grid gap-8 md:grid-cols-2">
+          {services.map((service, index) => (
+            <ServiceCard key={index} {...service} />
+          ))}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="border-t border-border">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/10 via-accent/10 to-primary/5 p-8 sm:p-12">
+            <div className="relative text-center">
+              <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+                <span className="bg-gradient-to-r from-orange-600 via-pink-600 to-purple-600 bg-clip-text text-transparent dark:from-orange-400 dark:via-pink-400 dark:to-purple-400">
+                  Ready to Get Started?
+                </span>
+              </h2>
+              <p className="mx-auto mb-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
+                Let's collaborate and create something amazing together. Reach out to discuss your project and get a
+                custom quote.
+              </p>
+              <button className="rounded-lg bg-primary px-8 py-3 font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg">
+                <a href="/services">Go to the Services Page</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
