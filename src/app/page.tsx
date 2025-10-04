@@ -211,34 +211,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Services overview */}
-        <section id="work" className="py-16 px-6 w-full items-center justify-center flex flex-col gap-12">
-          <div className="max-w-4xl lg:max-w-[70vw] mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-              <div className="md:col-span-1">
-                <h2 className="text-2xl sm:text-3xl lg:text-[3vw] font-light mb-6">Recent Work</h2>
-              </div>
-              <div className="md:col-span-2">
-                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                  A selection of recent photographs showcasing different styles and subjects. Each image represents a
-                  moment, a story, or an emotion captured through my lens. Updated "weekly", schedule isn't consistent.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="w-full max-w-md sm:max-w-lg lg:w-[40vw] lg:max-w-none h-auto px-4 sm:px-0">
-            <Image
-              src="/feed.png"
-              width={1080}
-              height={700}
-              sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 50vw"
-              draggable={false}
-              alt="lucashotedits - Photographer"
-              className="w-full h-full object-cover border-4 border-gray-800 dark:border-gray-500 rounded-2xl overflow-hidden"
-            />
-          </div>
-        </section>
-
         <ServicesDisplay />
 
         {/* Contact Section */}
